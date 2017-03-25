@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(204, 249, 131);
+    /*background-image: url("IMG/back3.jpg");*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    background-color: aquamarine;
+    height: 400px;
+    width: 500px;
+    /*padding: 300px;*/
+    margin-top: 55px;
+    border: solid 2px black;
+    /*overflow: auto;*/
+}
+
+/*.calc{
+  background-color: white;
+  height: 400px;
+  width: 250px;
+  overflow: auto;
+}*/
+
+
+ /*<div className="calc">Caculator</div>*/
