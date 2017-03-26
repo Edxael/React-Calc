@@ -8,20 +8,40 @@ body{
 
 .container{
     background-color: aquamarine;
-    height: 400px;
+    height: 500px;
     width: 500px;
     /*padding: 300px;*/
     margin-top: 55px;
     border: solid 2px black;
-    /*overflow: auto;*/
 }
 
-/*.calc{
-  background-color: white;
-  height: 400px;
-  width: 250px;
-  overflow: auto;
-}*/
+.trans{
+    background-color: rgba(254, 254, 254, 0.5);
+    border: 2px solid white;
+}
 
+.top{
+    height: 390px;
+    width: 450px;
+    margin: 20px 0 10px 25px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
 
- /*<div className="calc">Caculator</div>*/
+.bottom1{
+    height: 55px;
+    width: 450px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 7px 2px 0 2px;
+}
+
+.name{
+    padding-left: 10px;
+}
