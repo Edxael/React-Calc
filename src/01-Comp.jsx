@@ -6,6 +6,58 @@ import DisplayP from './display.jsx';
 import ButtonTemp from './button.jsx';
 
 class Comp_01 extends Component{
+
+    constructor(){
+            super();
+            this.state = {
+                expression: ""
+            }
+                this.displayUserInput = this.displayUserInput.bind(this);
+                this.happyInput = this.happyInput.bind(this);
+                this.clearDisplayPanel = this.clearDisplayPanel.bind(this);
+                this.displayUserOutput = this.displayUserOutput.bind(this);
+        }
+
+        displayUserInput(userInput){
+            userInput = this.state.expression + userInput;
+            this.setState({
+                expression: userInput
+            });
+            console.log(this.state.expression);
+        }
+
+        displayUserOutput(){
+            try{
+                let userOutput = eval(this.state.expression);
+                this.setState({
+                    expression:userOutput
+                });
+            }
+            catch(e){
+                this.setState({
+                    expression: "Error!!"
+                })
+            }
+        }
+
+        clearDisplayPanel(){
+            this.setState({
+                expression: ""
+            });
+        }
+
+
+        happyInput(userInput){
+            this.setState({
+                expression: "HELLO ;-) ..."
+            });
+            console.log(this.state.expression);
+        }
+
+
+
+
+
     render(){
         return(
             <div className="container">
@@ -13,11 +65,11 @@ class Comp_01 extends Component{
                     <div className="top trans">
                         <br/>
                         <div>Basic React.js Calculator</div>
-                        <DisplayP/>
+                        <DisplayP expression={this.state.expression}/>
                         <br/><br/>
                         <div className="btn-cont">
                             <div className="btn-row">
-                                <ButtonTemp btnValue=";-)" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue=";-)" displayInput={this.happyInput}/>
                                 <ButtonTemp btnValue="(" displayInput={this.displayUserInput}/>
                                 <ButtonTemp btnValue=")" displayInput={this.displayUserInput}/>
                                 <ButtonTemp btnValue="/" displayInput={this.displayUserInput}/>
@@ -43,8 +95,8 @@ class Comp_01 extends Component{
                             <div className="btn-row">
                                 <ButtonTemp btnValue="0" displayInput={this.displayUserInput}/>
                                 <ButtonTemp btnValue="." displayInput={this.displayUserInput}/>
-                                <ButtonTemp btnValue="c" displayInput={this.displayUserInput}/>
-                                <ButtonTemp btnValue="=" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="CLR" clearDisplay={this.clearDisplayPanel}/>
+                                <ButtonTemp btnValue="=" displayOutput={this.displayUserOutput}/>
                             </div>
                         </div>
                         <br/>
