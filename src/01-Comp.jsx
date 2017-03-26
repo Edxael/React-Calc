@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo1 from './IMG/git3.png';
 import logo2 from './IMG/pf1.png';
 import './style.css';
-
+import DisplayP from './display.jsx';
+import ButtonTemp from './button.jsx';
 
 class Comp_01 extends Component{
     render(){
@@ -11,7 +12,41 @@ class Comp_01 extends Component{
 
                     <div className="top trans">
                         <br/>
-                        <div>Hello from 01-Comp.jsx</div>
+                        <div>Basic React.js Calculator</div>
+                        <DisplayP/>
+                        <br/><br/>
+                        <div className="btn-cont">
+                            <div className="btn-row">
+                                <ButtonTemp btnValue=";-)" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="(" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue=")" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="/" displayInput={this.displayUserInput}/>
+                            </div>
+                            <div className="btn-row">
+                                <ButtonTemp btnValue="7" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="8" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="9" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="*" displayInput={this.displayUserInput}/>
+                            </div>
+                            <div className="btn-row">
+                                <ButtonTemp btnValue="4" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="5" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="6" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="-" displayInput={this.displayUserInput}/>
+                            </div>
+                            <div className="btn-row">
+                                <ButtonTemp btnValue="1" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="2" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="3" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="+" displayInput={this.displayUserInput}/>
+                            </div>
+                            <div className="btn-row">
+                                <ButtonTemp btnValue="0" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="." displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="c" displayInput={this.displayUserInput}/>
+                                <ButtonTemp btnValue="=" displayInput={this.displayUserInput}/>
+                            </div>
+                        </div>
                         <br/>
                         {/* this is a commet */}
                     </div>

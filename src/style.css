@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(204, 249, 131);
+    background-color: rgb(161, 185, 247);
     /*background-image: url("IMG/back3.jpg");*/
     text-align: center;
     display: flex;
@@ -8,10 +8,10 @@ body{
 
 .container{
     background-color: aquamarine;
-    height: 500px;
+    height: 480px;
     width: 500px;
     /*padding: 300px;*/
-    margin-top: 55px;
+    margin-top: 25px;
     border: solid 2px black;
 }
 
@@ -21,7 +21,7 @@ body{
 }
 
 .top{
-    height: 390px;
+    height: 370px;
     width: 450px;
     margin: 20px 0 10px 25px;
     margin-left: 25px;
@@ -44,4 +44,48 @@ body{
 
 .name{
     padding-left: 10px;
+}
+
+
+
+/*--------------------------------*/
+        /* -  Display  - */
+/*--------------------------------*/
+.display-cl{
+    margin-top: 10px;
+    height: 55px;
+    width: 300px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+
+
+/*--------------------------------*/
+       /* -  Button's  - */
+/*--------------------------------*/
+
+.btn-cont{
+    /*border: 1px solid pink;*/
+    /*width: 302px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-row{
+    /*border: 1px solid black;*/
+    margin-bottom: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    height: 35px;
+    width: 70px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #888888;
 }
